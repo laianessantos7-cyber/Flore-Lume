@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FlorLume — velas artesanais e aromáticas feitas à mão.">
+    <title>FlorLume | Velas Artesanais e Aromáticas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+        <a href="#" class="logo">
+    <div class="logo-icon">
+        <img src="assets/logo.png" alt="Ícone Floré Lume">
+    </div>
+
+    <div>
+        <span class="logo-name">Floré Lume</span>
+        <span class="logo-subtitle">Velas Artesanais</span>
+    </div>
+</a>
+
+            <nav class="desktop-nav" aria-label="Navegação principal">
+                <a href="#inicio">Início</a>
+                <a href="#categorias">Categorias & Coleções</a>
+                <a href="#personalizadas" class="highlight-link">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Crie a Sua
+                </a>
+                <a href="#sobre">Sobre Nós</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="cartBtn" class="cart-button" aria-label="Abrir carrinho">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span id="cartCount" class="cart-count">0</span>
+                </button>
+
+                <button id="mobileMenuBtn" class="mobile-menu-button" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="#inicio">Início</a>
+            <a href="#categorias">Categorias</a>
+            <a href="#personalizadas" class="highlight-link">✨ Montar Vela Personalizada</a>
+            <a href="#sobre">Sobre Nós</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="eyebrow">
+                        <i class="fa-solid fa-leaf"></i>
+                        100% Cera Vegetal & Eco-Friendly
+                    </div>
+
+                    <h1>
+                        Ilumine seus momentos com
+                        <span>aromas únicos</span> e feitos à mão.
+                    </h1>
+
+                    <p>
+                        Transforme seu lar em um refúgio de aconchego. Nossas velas
+                        são produzidas artesanalmente com óleos essenciais selecionados
+                        para despertar memórias e sensações inesquecíveis.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#categorias" class="btn btn-primary">Ver Coleções de Velas</a>
+                        <a href="#personalizadas" class="btn btn-secondary">Crie Sua Vela Exclusiva</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="hero-glow"></div>
+                    <div class="hero-image-card">
+                        <img
+                            src="assets/vela-cafe.jpg"
+                            alt="Vela aromática acesa com decoração aconchegante"
+                        >
+                        <div class="featured-card">
+                            <div>
+                                <p>Aroma intenso de café </p>
+                                <strong> Feita para perfurmar o ambiente para os amantes de café </strong>
+                            </div>
+                            <span>Coleção Especial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categorias" class="catalog-section section">
+            <div class="container">
+                <div class="section-heading">
+                    <span>Catálogo Exclusivo</span>
+                    <h2>Explore Nossas Velas</h2>
+                    <p>
+                        Navegue pelas nossas categorias principais ou selecione
+                        uma coleção temática especial.
+                    </p>
+                </div>
+
+                <div class="category-tabs">
+                    <button data-category="all" class="cat-btn active">Todas as Velas</button>
+                    <button data-category="aromaticas" class="cat-btn">Velas Aromáticas</button>
+                    <button data-category="decorativas" class="cat-btn">Decorativas & Esculturais</button>
+                </div>
+
+                <div id="subCollectionFilters" class="collection-filters">
+                    <span class="filter-label">
+                        <i class="fa-solid fa-filter"></i> Coleções:
+                    </span>
+                    <button data-collection="all" class="col-btn active">Todas</button>
+                    <button data-collection="primavera" class="col-btn">🌸 Coleção Primavera</button>
+                    <button data-collection="setembro" class="col-btn">🍂 Coleção de Setembro</button>
+                    <button data-collection="natal" class="col-btn">✨ Coleção de Natal</button>
+                    <button data-collection="classica" class="col-btn">🧘 Linha Clássica & Relax</button>
+                </div>
+
+                <div id="productsGrid" class="products-grid"></div>
+            </div>
+        </section>
+
+        <section id="personalizadas" class="custom-section section">
+            <div class="container custom-container">
+                <div class="section-heading">
+                    <span class="custom-badge">
+                        <i class="fa-solid fa-sparkles"></i> Monte a Sua
+                    </span>
+                    <h2>Velas Personalizadas</h2>
+                    <p>
+                        Escolha cada detalhe da sua vela: aroma, pote e mensagem
+                        especial no rótulo. Nós criamos do seu jeito!
+                    </p>
+                </div>
+
+                <div class="custom-card">
+                    <form id="customCandleForm">
+                        <div class="form-step">
+                            <h3>
+                                <span>1</span>
+                                Escolha a Fragrância / Aroma:
+                            </h3>
+
+                            <div class="option-grid scent-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="customScent" value="Lavanda & Chá Branco (Calmante)" checked>
+                                    <div>
+                                        <strong>Lavanda & Chá Branco</strong>
+                                        <small>Relaxante & Suave</small>
+                                    </div>
+                                </label>
+
+                                <label class="option-card">
+                                    <input type="radio" name="customScent" value="Baunilha & Café Crema (Aconchegante)">
+                                    <div>
+                                        <strong>Baunilha & Café</strong>
+                                        <small>Doce & Acolhedor</small>
+                                    </div>
+                                </label>
+
+                                <label class="option-card">
+                                    <input type="radio" name="customScent" value="Capim Limão & Alecrim (Energizante)">
+                                    <div>
+                                        <strong>Capim Limão & Alecrim</strong>
+                                        <small>Fresco & Cítrico</small>
+                                    </div>
+                                </label>
+
+                                <label class="option-card">
+                                    <input type="radio" name="customScent" value="Canela & Maçã Silvestre (Especiarias)">
+                                    <div>
+                                        <strong>Canela & Maçã</strong>
+                                        <small>Quente & Marcante</small>
+                                    </div>
+                                </label>
+
+                                <label class="option-card">
+                                    <input type="radio" name="customScent" value="Flor de Laranjeira & Jasmim">
+                                    <div>
+                                        <strong>Flor de Laranjeira</strong>
+                                        <small>Floral Elegante</small>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-step">
+                            <h3>
+                                <span>2</span>
+                                Escolha o Recipiente / Frasco:
+                            </h3>
+
+                            <div class="option-grid jar-grid">
+                                <label class="option-card centered">
+                                    <input type="radio" name="customJar" value="Vidro Âmbar Premium (180g)" checked>
+                                    <i class="fa-solid fa-jar"></i>
+                                    <strong>Vidro Âmbar (180g)</strong>
+                                    <small>Estilo rústico chic</small>
+                                </label>
+
+                                <label class="option-card centered">
+                                    <input type="radio" name="customJar" value="Pote de Cimento / Gesso Artesanal (200g)">
+                                    <i class="fa-solid fa-cubes-stacked olive-icon"></i>
+                                    <strong>Pote Cimento/Gesso (200g)</strong>
+                                    <small>Moderno & Minimalista</small>
+                                </label>
+
+                                <label class="option-card centered">
+                                    <input type="radio" name="customJar" value="Lata Metalizada Ouro Rosé (150g)">
+                                    <i class="fa-solid fa-box gold-icon"></i>
+                                    <strong>Lata Ouro Rosé (150g)</strong>
+                                    <small>Prática e Elegante</small>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-step">
+                            <h3>
+                                <span>3</span>
+                                Mensagem / Rótulo Personalizado:
+                            </h3>
+
+                            <p class="field-help">
+                                Escreva o nome de quem vai receber, uma frase motivacional
+                                ou a ocasião (Ex: "Luz para a Ana", "Feliz Aniversário",
+                                "Aconchego do Lar").
+                            </p>
+
+                            <input
+                                type="text"
+                                id="customLabel"
+                                placeholder="Digite seu texto para o rótulo da vela..."
+                                required
+                            >
+                        </div>
+
+                        <div class="custom-submit">
+                            <div>
+                                <span>Valor da Vela Personalizada:</span>
+                                <strong>R$ 68,90</strong>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa-solid fa-plus"></i>
+                                Adicionar Vela Personalizada ao Carrinho
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section section">
+            <div class="container about-grid">
+                <div class="about-image-wrapper">
+                    <img
+                        src="assets/lavanda.jpg"
+                        alt="Produção artesanal de velas"
+                    >
+                    <div class="about-quote">
+                        "Cada vela é vertida à mão com intenção, carinho e aromas que abraçam."
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <span class="about-eyebrow">Feito com Amor & Cuidado</span>
+                    <h2>A Essência da Floré Lume</h2>
+                    <p>
+                        Nossa jornada começou com o desejo de desacelerar a rotina e
+                        trazer mais luz e aconchego para o dia a dia. Todas as nossas
+                        velas são feitas à mão (hand-poured) utilizando uma mistura
+                        especial de cera de coco, palma e arroz — 100% livre de parafina.
+                    </p>
+
+                    <div class="about-features">
+                        <div>
+                            <i class="fa-solid fa-leaf"></i>
+                            <h4>Ecológicas</h4>
+                            <p>Queima limpa e sem resíduos nocivos.</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-heart"></i>
+                            <h4>Artesanais</h4>
+                            <p>Processo humanizado do início ao fim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cartDrawer" class="cart-drawer" aria-hidden="true">
+        <div class="cart-overlay" data-close-cart></div>
+
+        <aside class="cart-panel" aria-labelledby="cartTitle">
+            <div class="cart-header">
+                <div>
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <h2 id="cartTitle">Seu Pedido</h2>
+                </div>
+                <button id="closeCartBtn" aria-label="Fechar carrinho">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="cartItemsList" class="cart-items"></div>
+
+            <div class="cart-footer">
+                <div class="cart-total-row">
+                    <span>Total Estimado:</span>
+                    <strong id="cartTotal">R$ 0,00</strong>
+                </div>
+
+                <p class="cart-note">
+                    Pagamento e taxa de entrega combinados diretamente pelo WhatsApp.
+                </p>
+
+                <div class="customer-fields">
+                    <input type="text" id="clientName" placeholder="Seu Nome Completo *">
+                    <input type="text" id="clientAddress" placeholder="Bairro / Cidade para Entrega *">
+                    <textarea id="clientNotes" placeholder="Observações do Pedido (Opcional)" rows="2"></textarea>
+                </div>
+
+                <button id="whatsappBtn" class="whatsapp-button">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Finalizar Pedido via WhatsApp
+                </button>
+
+                <p class="whatsapp-note">
+                    Ao clicar, você será redirecionado para o nosso WhatsApp com o resumo pronto.
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <img
+                src="assets/logo-fundo.png"
+                alt="Logo Floré Lume"
+                class="footer-logo-imagem"
+            >
+
+            <span class="footer-logo">Floré Lume</span>
+
+            <p>
+                Velas artesanais aromáticas criadas para iluminação de momentos
+                e aconchego do lar.
+            </p>
+
+        </div>
+
+        <div>
+                <h4>Atendimento</h4>
+                <p><a href="https://wa.me/5571983151466" target="_blank" rel="noopener noreferrer" aria-label="Conversar com a FlorLume pelo WhatsApp"><i class="fa-brands fa-whatsapp"></i> +55 (71) 98315-1466</a></p>
+                <p><a href="https://instagram.com/florelume.velasaromaticas?mdxt=aDRidmg1MWR2dGFy" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> @florelume.velasaromaticas</a></p>
+            </div>
+
+            <div>
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="https://instagram.com/florelume.velasaromaticas?mdxt=aDRidmg1MWR2dGFy" target="_blank" rel="noopener noreferrer" aria-label="Instagram da FlorLume"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 FlorLume Velas Artesanais. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
