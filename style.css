@@ -8,8 +8,8 @@
     --brand-dark: #321c13;
     --brand-soft: #f3d5c3;
 
-    --cream-50: #e9d9c9;
-    --cream-100: #ddc7b2;
+    --cream-50: #f0e5da;
+    --cream-100: #e8d8c9;
     --cream-200: #cbb097;
 
     --sand: #b99b7d;
@@ -211,17 +211,15 @@ button {
     display: none;
 }
 
-/* =========================================
-   BANNER PRINCIPAL
-========================================= */
+
 
 .hero-section {
     padding: 82px 0 100px;
     background: linear-gradient(
         135deg,
-        #d5b99f,
-        #c6a487 60%,
-        #ad8463
+        #ead9c8,
+        #e3cbb6 60%,
+        #d9bea5
     );
     overflow: hidden;
 }
