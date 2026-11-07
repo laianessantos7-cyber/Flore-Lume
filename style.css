@@ -6,7 +6,7 @@
 :root {
     --brand: #593625;
     --brand-dark: #321c13;
-    --brand-soft: #80543b;
+    --brand-soft: #f3d5c3;
 
     --cream-50: #e9d9c9;
     --cream-100: #ddc7b2;
@@ -14,7 +14,7 @@
 
     --sand: #b99b7d;
     --olive: #73765b;
-    --gold: #b58a52;
+    --gold: #ecdac3;
 
     --text: #38251c;
     --muted: #756052;
@@ -1147,22 +1147,22 @@ button {
     }
 
     .mobile-menu {
-        display: flex;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        gap: 0;
-        padding: 8px 20px 15px;
-        background: #392319;
-        border-bottom: 1px solid rgba(255,255,255,.12);
-        box-shadow: var(--shadow);
-    }
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 20px 15px;
+    background: #392319;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    box-shadow: var(--shadow);
+}
 
-    .mobile-menu.open {
-        display: flex;
-    }
+.mobile-menu.open {
+    display: flex;
+}
 
     .mobile-menu a {
         padding: 12px 5px;
